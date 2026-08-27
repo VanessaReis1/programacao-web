@@ -5,3 +5,4 @@ Repositório destinado às atividades desenvolvidas na disciplina de Programaç�
 ## Atividades
 
 - [Atividade 1](./atividade-1/)
+- [Atividade 2](./atividade-2/)
