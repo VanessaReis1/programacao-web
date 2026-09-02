@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #eef2ff;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.cabecalho {
+    background-color: #7c00ff;
+    border: 3px solid #3730a3;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.cabecalho h1 {
+    margin: 10px;
+}
+
+.conteudo {
+    margin-top: 25px;
+    border: 2px solid #c7d2fe;
+    padding: 25px;
+    background-color: white;
+}
+
+.sobre {
+    border: 2px solid #818cf8;
+    padding: 20px;
+    background-color: #faf5ff;
+}
+
+.sobre h2 {
+    color: #7e22ce;
+}
+
+.destaque {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.habilidades {
+    margin-top: 25px;
+    border: 2px solid #a78bfa;
+    padding: 20px;
+    background-color: #fdf4ff;
+}
+
+.habilidades h2 {
+    color: #9333ea;
+}
+
+.habilidades span {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    background-color: #a21caf;
+    border: 2px solid #5b21b6;
+    color: white;
+}
+
+.rodape {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #2e0057;
+    color: white;
+    text-align: center;
+}

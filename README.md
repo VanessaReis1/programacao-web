@@ -6,3 +6,4 @@ Repositório destinado às atividades desenvolvidas na disciplina de Programaç�
 
 - [Atividade 1](./atividade-1/)
 - [Atividade 2](./atividade-2/)
+- [Atividade 3](./atividade-3/)
