@@ -5,6 +5,6 @@ Repositório destinado às atividades desenvolvidas na disciplina de Programaç�
 ## Atividades
 
 - [Atividade 1](./atividade-1/)
-- [Atividade 2](./atividade-2/)
+- [Atividade 2](./2/)
 - [Atividade 3](./atividade-3/)
-- [Landing Page Interativa](./landing-page-interativa/)
+- [Página de destino interativa](./atividade-landing-page-Vanessa/)
