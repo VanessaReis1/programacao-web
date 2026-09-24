@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a codificação dos caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Permite que a página se adapte a celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Música para Todos</title>
+
+    <!-- Conecta o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho principal da página -->
+    <header>
+
+        <!-- Nome da página -->
+        <div class="logo">
+            🎵 Música para Todos
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#instrumentos">Instrumentos</a>
+            <a href="#interacao">Interação</a>
+        </nav>
+
+        <!-- Botão que será usado pelo JavaScript -->
+        <button id="botaoTema">🌙 Modo escuro</button>
+
+    </header>
+
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Seção inicial -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-texto">
+
+                <span class="destaque">EDUCAÇÃO MUSICAL</span>
+
+                <h1>
+                    A música transforma,
+                    <span>conecta e inspira.</span>
+                </h1>
+
+                <p>
+                    A música está presente em diferentes momentos da nossa vida.
+                    Aprender música pode estimular a criatividade, a expressão
+                    e o desenvolvimento de novas habilidades.
+                </p>
+
+                <!-- Botão de interação -->
+                <button id="botaoMensagem" class="botao-principal">
+                    🎶 Descubra uma mensagem
+                </button>
+
+                <!-- O JavaScript modificará este texto -->
+                <p id="mensagem" class="mensagem"></p>
+
+            </div>
+
+            <div class="hero-imagem">
+                <div class="nota-musical">♫</div>
+                <div class="nota-musical nota2">♪</div>
+                <div class="nota-musical nota3">♬</div>
+
+                <div class="disco">
+                    🎵
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Seção de benefícios -->
+        <section id="beneficios" class="secao">
+
+            <div class="titulo-secao">
+                <span>POR QUE APRENDER MÚSICA?</span>
+
+                <h2>Benefícios da música</h2>
+
+                <p>
+                    A prática musical pode proporcionar diferentes experiências
+                    de aprendizagem e expressão.
+                </p>
+            </div>
+
+
+            <div class="cards">
+
+                <!-- Card 1 -->
+                <article class="card">
+
+                    <div class="icone">🧠</div>
+
+                    <h3>Criatividade</h3>
+
+                    <p>
+                        A música pode estimular a criatividade e incentivar
+                        novas formas de expressão.
+                    </p>
+
+                </article>
+
+
+                <!-- Card 2 -->
+                <article class="card">
+
+                    <div class="icone">❤️</div>
+
+                    <h3>Expressão</h3>
+
+                    <p>
+                        Através da música podemos expressar sentimentos,
+                        ideias e emoções.
+                    </p>
+
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="card">
+
+                    <div class="icone">🤝</div>
+
+                    <h3>Conexão</h3>
+
+                    <p>
+                        Fazer música em grupo pode fortalecer a cooperação
+                        e a convivência.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+                <!-- Seção sobre a importância da música -->
+        <section class="secao sobre-musica">
+
+            <div class="sobre-texto">
+
+                <span>MAIS DO QUE SONS</span>
+
+                <h2>A música também é uma forma de aprender.</h2>
+
+                <p>
+                    Aprender música vai muito além de tocar um instrumento.
+                    É uma oportunidade de desenvolver a criatividade,
+                    a sensibilidade e a capacidade de se expressar.
+                </p>
+
+                <p>
+                    Por meio da prática musical, crianças, jovens e adultos
+                    podem descobrir novas possibilidades de aprendizagem,
+                    convivência e criação.
+                </p>
+
+            </div>
+
+            <div class="sobre-destaque">
+
+                <div class="nota-grande">♫</div>
+
+                <h3>
+                    Aprender, criar e compartilhar.
+                </h3>
+
+                <p>
+                    Cada pessoa pode encontrar na música uma maneira
+                    própria de se expressar.
+                </p>
+
+            </div>
+
+        </section>
+        
+        <!-- Seção de instrumentos -->
+        <section id="instrumentos" class="secao instrumentos">
+
+            <div class="titulo-secao">
+
+                <span>EXPLORE OS SONS</span>
+
+                <h2>Instrumentos musicais</h2>
+
+                <p>
+                    Cada instrumento possui características e possibilidades
+                    diferentes de expressão musical.
+                </p>
+
+            </div>
+
+
+            <div class="instrumentos-grid">
+
+                <div class="instrumento">
+                    <span>🎹</span>
+                    <h3>Piano</h3>
+                    <p>Instrumento de teclas com grande variedade de sons.</p>
+                </div>
+
+                <div class="instrumento">
+                    <span>🎸</span>
+                    <h3>Violão</h3>
+                    <p>Instrumento de cordas muito presente em diferentes estilos.</p>
+                </div>
+
+                <div class="instrumento">
+                    <span>🎷</span>
+                    <h3>Sopro</h3>
+                    <p>Instrumentos que utilizam a coluna de ar para produzir sons.</p>
+                </div>
+
+                <div class="instrumento">
+                    <span>🥁</span>
+                    <h3>Percussão</h3>
+                    <p>Instrumentos que exploram ritmos e diferentes timbres.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Seção interativa -->
+        <section id="interacao" class="interacao">
+
+            <div class="interacao-conteudo">
+
+                <span>VAMOS INTERAGIR?</span>
+
+                <h2>Qual é o seu nome?</h2>
+
+                <p>
+                    Digite seu nome abaixo e receba uma mensagem musical
+                    personalizada.
+                </p>
+
+
+                <!-- Campo obrigatório para a atividade -->
+                <input
+                    type="text"
+                    id="campoNome"
+                    placeholder="Digite seu nome..."
+                >
+
+
+                <!-- Área onde aparecerá a saudação -->
+                <p id="saudacao">
+                    Sua mensagem aparecerá aqui.
+                </p>
+
+
+                <!-- Contador de curtidas -->
+                <div class="curtida-area">
+
+                    <button id="botaoCurtir">
+                        ❤️ Curtir
+                    </button>
+
+                    <span id="contador">
+                        0
+                    </span>
+
+                    <span>
+                        pessoas curtiram
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+
+        <p>
+            🎵 Música para Todos
+        </p>
+
+        <p>
+            Projeto acadêmico desenvolvido com HTML, CSS e JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- Conecta o arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

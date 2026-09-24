@@ -1,0 +1,799 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+/* Remove margens e espaçamentos padrão dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Configura o comportamento da rolagem */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Configura o corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf5;
+    color: #302a27;
+    line-height: 1.6;
+
+    /* Transição usada quando o modo escuro for ativado */
+    transition: background-color 0.4s, color 0.4s;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+header {
+    width: 100%;
+    padding: 20px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8b4d3b;
+}
+
+
+/* Menu */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+
+/* Links do menu */
+nav a {
+    text-decoration: none;
+    color: #302a27;
+    font-weight: bold;
+
+    transition: color 0.3s;
+}
+
+
+/* Quando o mouse passa sobre o link */
+nav a:hover {
+    color: #c27855;
+}
+
+
+/* Botões */
+button {
+    border: none;
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+/* Efeito ao passar o mouse */
+button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Botão do tema */
+#botaoTema {
+    padding: 10px 16px;
+
+    border-radius: 20px;
+
+    background-color: #eee2d8;
+    color: #51352c;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   SEÇÃO PRINCIPAL
+   ========================================================= */
+
+.hero {
+    min-height: 600px;
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+/* Texto principal */
+.hero-texto {
+    max-width: 600px;
+}
+
+
+/* Pequeno destaque */
+.destaque {
+    color: #c27855;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* Título principal */
+.hero h1 {
+    margin: 20px 0;
+
+    font-size: 55px;
+    line-height: 1.1;
+}
+
+
+/* Parte colorida do título */
+.hero h1 span {
+    color: #b76545;
+}
+
+
+/* Parágrafo */
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* Botão principal */
+.botao-principal {
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background-color: #9f6048;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Mensagem gerada pelo JavaScript */
+.mensagem {
+    color: #9f6048;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   ILUSTRAÇÃO MUSICAL
+   ========================================================= */
+
+.hero-imagem {
+    width: 380px;
+    height: 380px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ead5c7;
+
+    border-radius: 50%;
+}
+
+
+/* Disco central */
+.disco {
+    width: 210px;
+    height: 210px;
+
+    border-radius: 50%;
+
+    background-color: #5b3830;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Notas musicais */
+.nota-musical {
+    position: absolute;
+
+    top: 40px;
+    left: 60px;
+
+    font-size: 50px;
+
+    transform: rotate(-15deg);
+}
+
+
+.nota2 {
+    top: auto;
+    bottom: 50px;
+    left: auto;
+    right: 45px;
+
+    font-size: 45px;
+}
+
+
+.nota3 {
+    top: 90px;
+    left: auto;
+    right: 40px;
+
+    font-size: 35px;
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.secao {
+    padding: 90px 7%;
+}
+
+
+/* Título das seções */
+.titulo-secao {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+
+.titulo-secao span {
+    color: #c27855;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.titulo-secao h2 {
+    font-size: 38px;
+
+    margin: 10px 0;
+}
+
+
+.titulo-secao p {
+    color: #6d625d;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+.card {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.3s;
+}
+
+
+/* Efeito nos cards */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+
+.icone {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.card h3 {
+    margin-bottom: 10px;
+
+    font-size: 22px;
+}
+
+
+.card p {
+    color: #6d625d;
+}
+
+
+/* =========================================================
+   INSTRUMENTOS
+   ========================================================= */
+
+.instrumentos {
+    background-color: #f2e7df;
+}
+
+
+.instrumentos-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.instrumento {
+    padding: 30px 20px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Efeito quando o mouse passa sobre o instrumento */
+
+.instrumento:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.instrumento span {
+    font-size: 45px;
+}
+
+
+.instrumento h3 {
+    margin: 10px 0;
+}
+
+
+.instrumento p {
+    color: #6d625d;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ÁREA INTERATIVA
+   ========================================================= */
+
+.interacao {
+    padding: 90px 7%;
+
+    background-color: #8f5947;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.interacao-conteudo {
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+.interacao span:first-child {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+.interacao h2 {
+    font-size: 38px;
+
+    margin: 10px 0;
+}
+
+
+.interacao p {
+    margin-bottom: 25px;
+}
+
+
+/* Campo de nome */
+#campoNome {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Saudação */
+#saudacao {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    min-height: 30px;
+}
+
+
+/* Área da curtida */
+.curtida-area {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* Botão de curtir */
+#botaoCurtir {
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    background-color: white;
+
+    color: #8f5947;
+
+    font-weight: bold;
+}
+
+
+/* Número do contador */
+#contador {
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #302a27;
+
+    color: white;
+}
+
+
+footer p:first-child {
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   MODO ESCURO
+   ========================================================= */
+
+/* Essas classes serão adicionadas pelo JavaScript */
+
+body.modo-escuro {
+    background-color: #1f1b1a;
+
+    color: #f5eee9;
+}
+
+
+body.modo-escuro header {
+    background-color: #292322;
+}
+
+
+body.modo-escuro nav a {
+    color: #f5eee9;
+}
+
+
+body.modo-escuro .card {
+    background-color: #302927;
+}
+
+
+body.modo-escuro .card p,
+body.modo-escuro .instrumento p {
+    color: #d6c9c2;
+}
+
+
+body.modo-escuro .instrumentos {
+    background-color: #272120;
+}
+
+
+body.modo-escuro .instrumento:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   SEÇÃO SOBRE A MÚSICA
+   ========================================================= */
+
+.sobre-musica {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    background-color: #fffaf5;
+}
+
+
+/* Pequeno título da seção */
+
+.sobre-texto > span {
+    color: #c27855;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Título */
+
+.sobre-texto h2 {
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin: 12px 0 25px;
+}
+
+
+/* Parágrafos */
+
+.sobre-texto p {
+    color: #6d625d;
+
+    margin-bottom: 15px;
+
+    font-size: 17px;
+}
+
+
+/* Card de destaque */
+
+.sobre-destaque {
+    padding: 40px;
+
+    background-color: #ead5c7;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Nota musical grande */
+
+.nota-grande {
+    font-size: 80px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Título do destaque */
+
+.sobre-destaque h3 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Texto do destaque */
+
+.sobre-destaque p {
+    color: #5f4b43;
+}
+
+
+/* Ajuste para o modo escuro */
+
+body.modo-escuro .sobre-musica {
+    background-color: #1f1b1a;
+}
+
+
+body.modo-escuro .sobre-texto p {
+    color: #d6c9c2;
+}
+
+
+body.modo-escuro .sobre-destaque {
+    background-color: #302927;
+}
+
+
+body.modo-escuro .sobre-destaque p {
+    color: #d6c9c2;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+        .sobre-musica {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .instrumentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-imagem {
+        width: 280px;
+        height: 280px;
+    }
+
+
+    .disco {
+        width: 160px;
+        height: 160px;
+
+        font-size: 60px;
+    }
+
+
+    .instrumentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    header {
+        justify-content: center;
+    }
+
+
+    nav {
+        gap: 12px;
+
+        font-size: 14px;
+    }
+
+}
+    .sobre-texto h2 {
+        font-size: 30px;
+    }
+
+    
