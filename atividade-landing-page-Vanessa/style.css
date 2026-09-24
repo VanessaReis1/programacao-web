@@ -589,6 +589,13 @@ body.modo-escuro .instrumentos {
     background-color: #272120;
 }
 
+body.modo-escuro .instrumento h3 {
+    color: #4a3028;
+}
+
+body.modo-escuro .instrumento p {
+    color: #6d625d;
+}
 
 body.modo-escuro .instrumento:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
