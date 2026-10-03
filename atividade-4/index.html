@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minhas Tarefas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Minhas Tarefas</h1>
+
+        <p class="descricao">
+            Cadastre suas tarefas e acompanhe seus registros.
+        </p>
+
+        <!-- FORMULÁRIO -->
+        <form id="formularioTarefa">
+
+            <div class="campo">
+                <label for="nomeTarefa">Tarefa</label>
+                <input 
+                    type="text" 
+                    id="nomeTarefa" 
+                    placeholder="Digite a tarefa"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="responsavel">Responsável</label>
+                <input 
+                    type="text" 
+                    id="responsavel" 
+                    placeholder="Digite o responsável"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="prioridade">Prioridade</label>
+
+                <select id="prioridade" required>
+                    <option value="">Selecione</option>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+
+            <button type="submit">
+                Cadastrar tarefa
+            </button>
+
+        </form>
+
+        <hr>
+
+        <section>
+
+            <h2>Tarefas cadastradas</h2>
+
+            <div id="listaTarefas"></div>
+
+            <button 
+                type="button" 
+                id="botaoLimpar"
+                class="botao-limpar"
+            >
+                Limpar registros
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
