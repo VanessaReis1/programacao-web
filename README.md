@@ -1,3 +1,4 @@
+
 # Programação para Web
 
 Repositório destinado às atividades desenvolvidas na disciplina de Programação para Web.
@@ -9,3 +10,4 @@ Repositório destinado às atividades desenvolvidas na disciplina de Programaç�
 - [Atividade 3](./atividade-3/)
 - [Página de destino interativa](./atividade-landing-page-Vanessa/)
 - [Atividade 4](./atividade-4/)
+- [Trabalho Grupo 01 – Som & Arte](./trabalho-grupo-01/)
