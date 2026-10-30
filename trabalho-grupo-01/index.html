@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações iniciais da página e ligação com o arquivo de estilos. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Som & Arte - Explore músicas, artistas e álbuns.">
+    <title>Som & Arte | Catálogo Musical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho com a marca, links de navegação e botão de troca de tema. -->
+
+    <header class="cabecalho">
+        <a href="#inicio" class="logo">
+            <span class="logo-icone">♫</span>
+            <span>
+                <strong>Som & Arte</strong>
+                <small>CATÁLOGO MUSICAL</small>
+            </span>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Explorar</a>
+            <a href="#favoritos">Favoritos <span id="numeroFavoritos">0</span></a>
+        </nav>
+
+        <button id="botaoTema" class="botao-tema" aria-label="Alternar tema">
+            ☀️
+        </button>
+    </header>
+
+    <!-- Conteúdo principal do catálogo. -->
+    <main>
+        <!-- Apresentação inicial do projeto. -->
+        <section id="inicio" class="hero">
+            <div class="hero-conteudo">
+                <span class="etiqueta">SUA EXPERIÊNCIA MUSICAL</span>
+                <h1>Descubra músicas.<br><span>Sinta a arte.</span></h1>
+                <p>
+                    Explore artistas, descubra novos sons e construa
+                    sua própria coleção musical.
+                </p>
+                <a href="#catalogo" class="botao-principal">
+                    Explorar músicas →
+                </a>
+            </div>
+            <div class="nota-musical">♫</div>
+        </section>
+
+        <!-- Área de pesquisa e exibição das músicas retornadas pela API. -->
+        <section id="catalogo" class="secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="subtitulo">EXPLORE NOSSA SELEÇÃO</span>
+                    <h2>Catálogo musical</h2>
+                </div>
+                <span id="contador" class="contador">Carregando...</span>
+            </div>
+
+            <form id="formPesquisa" class="pesquisa">
+                <input
+                    type="search"
+                    id="campoPesquisa"
+                    placeholder="Pesquise por música ou artista..."
+                    aria-label="Pesquisar músicas ou artistas"
+                    required
+                >
+                <button type="submit">Pesquisar</button>
+            </form>
+
+            <div id="mensagem" class="mensagem" role="status">
+                Carregando músicas...
+            </div>
+
+            <div id="listaMusicas" class="grid-musicas"></div>
+        </section>
+
+        <!-- Área que mostra as músicas salvas pelo usuário. -->
+        <section id="favoritos" class="secao favoritos-secao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="subtitulo">SUA COLEÇÃO PARTICULAR</span>
+                    <h2>Minhas favoritas</h2>
+                </div>
+                <span id="contadorFavoritos" class="contador">0 músicas</span>
+            </div>
+
+            <div id="listaFavoritos" class="grid-musicas"></div>
+
+            <div id="mensagemFavoritos" class="mensagem">
+                Você ainda não adicionou músicas aos favoritos.
+            </div>
+        </section>
+    </main>
+
+    <!-- Janela que será preenchida com os detalhes da música selecionada. -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-conteudo">
+            <button id="fecharModal" class="fechar" aria-label="Fechar">×</button>
+            <div id="detalhesMusica"></div>
+        </div>
+    </div>
+
+    <!-- Rodapé com as tecnologias utilizadas no projeto. -->
+    <footer class="rodape">
+        <strong>♫ Som & Arte</strong>
+        <p>Projeto acadêmico — Programação Web</p>
+        <small>HTML • CSS • JavaScript • iTunes API • localStorage</small>
+        <p class="credito">Dados musicais fornecidos pela Apple iTunes Search API.</p>
+    </footer>
+
+    <!-- Carrega o JavaScript depois da estrutura HTML. -->
+    <script src="script.js"></script>
+</body>
+</html>

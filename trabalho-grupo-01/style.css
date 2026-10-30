@@ -1,0 +1,474 @@
+
+/* Importa as fontes utilizadas nos títulos e nos textos. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Variáveis de cores do tema escuro, usado como padrão. */
+:root {
+    --fundo: #101010;
+    --superficie: #191919;
+    --card: #202020;
+    --texto: #f5f1e8;
+    --secundario: #aaa69d;
+    --dourado: #d6a84f;
+    --borda: rgba(214,168,79,.22);
+    --sombra: rgba(0,0,0,.3);
+}
+
+/* Atualiza as mesmas variáveis quando o tema claro é ativado. */
+body.tema-claro {
+    --fundo: #f5f1e8;
+    --superficie: #fff;
+    --card: #fff;
+    --texto: #191919;
+    --secundario: #68645c;
+    --dourado: #a87416;
+    --borda: rgba(168,116,22,.25);
+    --sombra: rgba(0,0,0,.1);
+}
+
+/* Remove margens padrão e facilita o cálculo das dimensões dos elementos. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Faz a navegação entre as seções acontecer suavemente. */
+html { scroll-behavior: smooth; }
+
+/* Estilos gerais da página. */
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "DM Sans", sans-serif;
+    transition: .3s;
+}
+
+button, input { font: inherit; }
+button { cursor: pointer; }
+a { text-decoration: none; color: inherit; }
+
+/* CABEÇALHO: organiza a marca, o menu e o botão de tema. */
+
+.cabecalho {
+    min-height: 76px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borda);
+    position: sticky; /* Mantém o cabeçalho visível durante a rolagem. */
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+}
+
+.logo small {
+    display: block;
+    color: var(--secundario);
+    font-size: .65rem;
+    letter-spacing: 1.5px;
+}
+
+.logo-icone {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--dourado);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--dourado);
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--secundario);
+    font-size: .9rem;
+}
+
+nav a:hover { color: var(--dourado); }
+
+#numeroFavoritos {
+    color: var(--dourado);
+}
+
+.botao-tema {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--texto);
+}
+
+/* APRESENTAÇÃO: seção inicial de destaque do catálogo. */
+
+.hero {
+    min-height: 470px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 80% 50%,
+        rgba(214,168,79,.15), transparent 40%);
+}
+
+.hero-conteudo {
+    max-width: 680px;
+    position: relative;
+    z-index: 2;
+}
+
+.etiqueta, .subtitulo {
+    color: var(--dourado);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 20px 0;
+    font: 700 clamp(3rem, 7vw, 5.5rem)/1.05 "Playfair Display", serif;
+}
+
+.hero h1 span { color: var(--dourado); }
+
+.hero p {
+    max-width: 520px;
+    color: var(--secundario);
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.botao-principal {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 4px;
+    background: var(--dourado);
+    color: #111;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.botao-principal:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.nota-musical {
+    position: absolute;
+    right: 8%;
+    font-size: 23rem;
+    color: rgba(214,168,79,.06);
+}
+
+/* SEÇÕES: espaçamento e títulos das áreas principais. */
+
+.secao {
+    padding: 75px 6%;
+}
+
+.favoritos-secao { background: var(--superficie); }
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.titulo-secao h2 {
+    margin-top: 7px;
+    font: 700 2.2rem "Playfair Display", serif;
+}
+
+.contador {
+    color: var(--secundario);
+    font-size: .85rem;
+}
+
+/* PESQUISA: aparência do campo e do botão de busca. */
+
+.pesquisa {
+    display: flex;
+    max-width: 720px;
+    margin-bottom: 35px;
+    gap: 10px;
+}
+
+.pesquisa input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    background: var(--card);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    outline: none;
+}
+
+.pesquisa input:focus { border-color: var(--dourado); }
+
+.pesquisa button {
+    padding: 0 22px;
+    background: var(--dourado);
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* CARDS: grade e aparência dos cartões de músicas. */
+
+.grid-musicas {
+    /* Cria colunas automáticas conforme o espaço disponível na tela. */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card-musica {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.card-musica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px var(--sombra);
+}
+
+.capa {
+    height: 230px;
+    background: #fff;
+    padding: 12px;
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantém a imagem inteira sem cortar a capa. */
+}
+
+.info {
+    padding: 17px;
+}
+
+.info h3 {
+    font-size: 1rem;
+    margin: 7px 0;
+    min-height: 44px;
+    line-height: 1.4;
+}
+
+.artista {
+    color: var(--secundario);
+    font-size: .85rem;
+}
+
+/* Mostra o preço da faixa quando essa informação está disponível na API. */
+.preco-musica {
+    color: var(--dourado);
+    font-weight: 700;
+    font-size: .9rem;
+    margin-top: 10px;
+}
+
+.genero {
+    color: var(--dourado);
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 1px;
+}
+
+.acoes {
+    display: grid;
+    grid-template-columns: 1fr 43px;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.detalhes-btn, .favorito-btn {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--dourado);
+    background: transparent;
+    color: var(--dourado);
+}
+
+.detalhes-btn:hover {
+    background: var(--dourado);
+    color: #111;
+}
+
+.favorito-btn {
+    font-size: 1.2rem;
+}
+
+.favorito-btn.ativo {
+    background: var(--dourado);
+    color: #111;
+}
+
+/* MENSAGENS: avisos de carregamento, erro ou lista vazia. */
+
+.mensagem {
+    padding: 28px;
+    text-align: center;
+    color: var(--secundario);
+    border: 1px dashed var(--borda);
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+/* MODAL: janela que apresenta os detalhes da música selecionada. */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,.8);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.aberto { display: flex; }
+
+.modal-conteudo {
+    width: min(800px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--borda);
+    background: var(--superficie);
+    color: var(--texto);
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+.detalhes-modal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detalhes-modal .imagem-modal {
+    background: white;
+    padding: 35px;
+    min-height: 350px;
+    display: grid;
+    place-items: center;
+}
+
+.imagem-modal img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.texto-modal { padding: 45px 30px; }
+
+.texto-modal h2 {
+    font: 700 2rem "Playfair Display", serif;
+    margin: 12px 0;
+}
+
+.texto-modal p {
+    color: var(--secundario);
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.audio-preview {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.link-apple {
+    display: inline-block;
+    color: var(--dourado);
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.botao-modal-favorito {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    background: var(--dourado);
+    color: #111;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* RODAPÉ: informações finais do projeto. */
+
+.rodape {
+    padding: 35px 6%;
+    text-align: center;
+    color: var(--secundario);
+    border-top: 1px solid var(--borda);
+    line-height: 2;
+}
+
+.rodape strong { color: var(--dourado); }
+.rodape small, .credito { font-size: .75rem; }
+
+/* RESPONSIVIDADE: adapta o layout para celulares e telas menores. */
+
+@media (max-width: 700px) {
+    .cabecalho { flex-wrap: wrap; }
+    nav { order: 3; width: 100%; justify-content: center; gap: 18px; }
+    .hero { min-height: 400px; padding: 65px 6%; }
+    .nota-musical { right: -40px; font-size: 15rem; }
+    .detalhes-modal { grid-template-columns: 1fr; }
+    .detalhes-modal .imagem-modal { min-height: 240px; }
+    .imagem-modal img { max-height: 200px; }
+}
+
+@media (max-width: 480px) {
+    .hero h1 { font-size: 3rem; }
+    .secao { padding: 55px 5%; }
+    .titulo-secao { align-items: flex-start; flex-direction: column; }
+    .pesquisa { flex-direction: column; }
+    .pesquisa button { padding: 14px; }
+    .grid-musicas { grid-template-columns: 1fr; }
+}
